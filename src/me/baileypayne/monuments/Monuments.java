@@ -94,6 +94,9 @@ public class Monuments extends JavaPlugin {
                     if(args[0].equalsIgnoreCase("vote")){
                         if (isContest == true) {
                             //finish voting system
+                            int oldvotes = MonumentManager.getManager().getMonument(args[1]).getVotes();
+                            int newvotes = oldvotes + 1;
+                            MonumentManager.getManager().getMonument(args[1]).setVotes(newvotes);
                         } else {
                             p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.RED + "No on-going contest!");
                         }
