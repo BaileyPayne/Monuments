@@ -53,7 +53,7 @@ public class MonumentManager {
             Monument arena = new Monument(keys, monumentLocation, votes);
         }
     }
-    public void createArena(String monumentName, Location monumentLocation, int votes){
+    public void createMonument(String monumentName, Location monumentLocation, int votes){
 
         //monument object to represent
         Monument monument = new Monument(monumentName, monumentLocation, votes);
