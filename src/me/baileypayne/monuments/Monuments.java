@@ -39,7 +39,13 @@ public class Monuments extends JavaPlugin {
         Player p = (Player) sender;
         if(command.getName().equalsIgnoreCase("monument")){
             if(args.length == 0){
-                //send list of commands
+                p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.GREEN + "Possible Commands;");
+                p.sendMessage(ChatColor.GREEN + "/monument start (for admins only)");
+                p.sendMessage(ChatColor.GREEN + "/monument end (for admins only)");
+                p.sendMessage(ChatColor.GREEN + "/monument new <monumentname> (to register a new monument)");
+                p.sendMessage(ChatColor.GREEN + "/monument view (to view a list of all monuments)");
+                p.sendMessage(ChatColor.GREEN + "/monument tp <monumentname> (to tp to see a monument)");
+                p.sendMessage(ChatColor.GREEN + "/monument vote <monumentname> (to vote for a monument)");
             } else {
                 if(args.length == 1) {
                     if (args[0].equalsIgnoreCase("start")) {
@@ -58,8 +64,17 @@ public class Monuments extends JavaPlugin {
                         } else if(isContest == false){
                             p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.RED + "You need to start a contest first!");
                         }
-                    } else {
-                        //send player options for using 1 argument or full list
+                    }
+                    if(args[0].equalsIgnoreCase("view")) {
+                        //show player a list of all monuments
+                    }else {
+                        p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.GREEN + "Possible Commands;");
+                        p.sendMessage(ChatColor.GREEN + "/monument start (for admins only)");
+                        p.sendMessage(ChatColor.GREEN + "/monument end (for admins only)");
+                        p.sendMessage(ChatColor.GREEN + "/monument new <monumentname> (to register a new monument)");
+                        p.sendMessage(ChatColor.GREEN + "/monument view (to view a list of all monuments)");
+                        p.sendMessage(ChatColor.GREEN + "/monument tp <monumentname> (to tp to see a monument)");
+                        p.sendMessage(ChatColor.GREEN + "/monument vote <monumentname> (to vote for a monument)");
                     }
                 } else if(args.length == 2){
                     if(args[0].equalsIgnoreCase("new")) {
@@ -83,10 +98,22 @@ public class Monuments extends JavaPlugin {
                             p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.RED + "No on-going contest!");
                         }
                     } else {
-                        //send list of possible commands
+                        p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.GREEN + "Possible Commands;");
+                        p.sendMessage(ChatColor.GREEN + "/monument start (for admins only)");
+                        p.sendMessage(ChatColor.GREEN + "/monument end (for admins only)");
+                        p.sendMessage(ChatColor.GREEN + "/monument new <monumentname> (to register a new monument)");
+                        p.sendMessage(ChatColor.GREEN + "/monument view (to view a list of all monuments)");
+                        p.sendMessage(ChatColor.GREEN + "/monument tp <monumentname> (to tp to see a monument)");
+                        p.sendMessage(ChatColor.GREEN + "/monument vote <monumentname> (to vote for a monument)");
                     }
                 } else {
-                    //send list of possible commands
+                    p.sendMessage(ChatColor.GOLD + "[Monuments]" + ChatColor.GREEN + "Possible Commands;");
+                    p.sendMessage(ChatColor.GREEN + "/monument start (for admins only)");
+                    p.sendMessage(ChatColor.GREEN + "/monument end (for admins only)");
+                    p.sendMessage(ChatColor.GREEN + "/monument new <monumentname> (to register a new monument)");
+                    p.sendMessage(ChatColor.GREEN + "/monument view (to view a list of all monuments)");
+                    p.sendMessage(ChatColor.GREEN + "/monument tp <monumentname> (to tp to see a monument)");
+                    p.sendMessage(ChatColor.GREEN + "/monument vote <monumentname> (to vote for a monument)");
                 }
             }
 
